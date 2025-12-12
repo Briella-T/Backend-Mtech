@@ -6,3 +6,11 @@
 [2025-12-12T15:14:09.824Z] Client2 connected
 [2025-12-12T15:14:17.221Z] Client2: my name is me
 [2025-12-12T15:14:27.625Z] Client2 disconnected
+[2025-12-12T15:25:58.150Z] Client1 connected
+[2025-12-12T15:26:04.884Z] Client2 connected
+[2025-12-12T15:26:10.790Z] Client1: Hello test
+[2025-12-12T15:26:16.821Z] Client2: hi test
+[2025-12-12T15:26:26.235Z] Client1: client 1 testing
+[2025-12-12T15:26:33.194Z] Client2: client 2 testing
+[2025-12-12T15:26:39.455Z] Client1 disconnected
+[2025-12-12T15:26:41.978Z] Client2 disconnected
