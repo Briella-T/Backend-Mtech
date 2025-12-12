@@ -1,0 +1,8 @@
+[2025-12-12T15:12:38.044Z] Client1 connected
+[2025-12-12T15:12:42.413Z] Client1: hello
+[2025-12-12T15:12:50.394Z] Client1: hi
+[2025-12-12T15:13:54.315Z] Client1: node clientMe
+[2025-12-12T15:14:03.157Z] Client1 disconnected
+[2025-12-12T15:14:09.824Z] Client2 connected
+[2025-12-12T15:14:17.221Z] Client2: my name is me
+[2025-12-12T15:14:27.625Z] Client2 disconnected
