@@ -1,0 +1,25 @@
+### main page
+
+GET http://localhost:3000/
+
+### test post request to /user 
+
+POST http://localhost:3000/user
+Content-Type: application/json
+
+{
+  "username": "John-Doe",
+  "email": "john019@email.com"
+}
+
+### test get request to /{apple}pie
+
+GET http://localhost:3000/applepie/23
+
+### test get request dragon/fly
+
+GET http://localhost:3000/dragon/fly
+
+### test get request class time
+
+GET http://localhost:3000/classTime/9am-5pm
