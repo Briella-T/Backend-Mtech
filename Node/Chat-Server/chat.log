@@ -14,3 +14,6 @@
 [2025-12-12T15:26:33.194Z] Client2: client 2 testing
 [2025-12-12T15:26:39.455Z] Client1 disconnected
 [2025-12-12T15:26:41.978Z] Client2 disconnected
+[2026-01-08T14:50:05.493Z] Client1 connected
+[2026-01-08T14:50:12.688Z] Client1: Hello
+[2026-01-08T14:50:24.553Z] Client1 disconnected

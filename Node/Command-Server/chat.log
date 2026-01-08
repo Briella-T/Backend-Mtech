@@ -1,0 +1,37 @@
+[2026-01-08T14:57:03.694Z] Client1 connected
+[2026-01-08T14:57:06.363Z] Client1: /w
+[2026-01-08T14:57:32.892Z] Client2 connected
+[2026-01-08T14:57:43.376Z] Client1 whispered to Client2: Hi
+[2026-01-08T14:57:53.716Z] Client1 disconnected
+[2026-01-08T14:57:58.830Z] Client2 disconnected
+[2026-01-08T15:01:04.051Z] Client1 connected
+[2026-01-08T15:01:08.517Z] Client1 changed username to Brie
+[2026-01-08T15:01:20.752Z] Client2 connected
+[2026-01-08T15:01:26.382Z] Client2 whispered to Brie: Hi
+[2026-01-08T15:01:26.383Z] Client2: /w Brie Hi
+[2026-01-08T15:01:56.019Z] Client2 whispered to Brie: boo
+[2026-01-08T15:01:56.020Z] Client2: /w Brie boo
+[2026-01-08T15:02:25.683Z] Client2 disconnected
+[2026-01-08T15:02:34.287Z] Client1 disconnected
+[2026-01-08T15:07:56.981Z] Client1 connected
+[2026-01-08T15:08:02.525Z] Client2 connected
+[2026-01-08T15:09:09.104Z] Client2 disconnected
+[2026-01-08T15:09:14.250Z] Client1 disconnected
+[2026-01-08T15:09:21.570Z] Client3 connected
+[2026-01-08T15:09:26.838Z] Client3: /w Client2 Hi
+[2026-01-08T15:09:32.840Z] Client4 connected
+[2026-01-08T15:09:43.558Z] Client3 whispered to Client4: hi
+[2026-01-08T15:09:43.559Z] Client3: /w Client4 hi
+[2026-01-08T15:09:58.039Z] Client3: /usernmae Brie
+[2026-01-08T15:10:12.506Z] Client3: /quit
+[2026-01-08T15:10:12.511Z] Client3 disconnected
+[2026-01-08T15:10:16.496Z] Client5 connected
+[2026-01-08T15:10:27.470Z] Admin Client5 kicked Client4 from the chat
+[2026-01-08T15:10:27.473Z] Client5: /kick Client4
+[2026-01-08T15:10:27.474Z] Client4 error: write after end
+[2026-01-08T15:10:27.475Z] Client4 disconnected
+[2026-01-08T15:10:41.100Z] Client6 connected
+[2026-01-08T15:10:58.179Z] Client5: /quit
+[2026-01-08T15:10:58.184Z] Client5 disconnected
+[2026-01-08T15:11:01.940Z] Client6: /quit
+[2026-01-08T15:11:01.942Z] Client6 disconnected
