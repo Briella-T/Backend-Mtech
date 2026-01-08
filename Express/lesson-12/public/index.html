@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication Demo</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Authentication Demo</h1>
+    <div class="demo-credentials">
+        <strong>Demo Credentials:</strong> Username: <code>demo</code>, Password: <code>demo123</code>
+    </div>
+
+    <div id="message-area"></div>
+
+    <!-- Login/Register Section (shown when not authenticated) -->
+    <div id="auth-section" class="container">
+        <h2>Login</h2>
+        <form id="login-form">
+            <div class="form-group">
+                <label for="login-username">Username:</label>
+                <input type="text" id="login-username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="login-password">Password:</label>
+                <input type="password" id="login-password" name="password" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+
+        <hr style="margin: 30px 0;">
+
+        <h2>Register New Account</h2>
+        <form id="register-form">
+            <div class="form-group">
+                <label for="register-username">Username:</label>
+                <input type="text" id="register-username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="register-password">Password:</label>
+                <input type="password" id="register-password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="register-displayname">Display Name (optional):</label>
+                <input type="text" id="register-displayname" name="displayName">
+            </div>
+            <button type="submit" class="secondary">Register</button>
+        </form>
+    </div>
+
+    <!-- Dashboard Section (shown when authenticated) -->
+    <div id="dashboard-section" class="container hidden">
+        <h2>Welcome to Your Dashboard</h2>
+        <div id="user-info" class="user-info"></div>
+        
+        <div style="margin-bottom: 20px;">
+            <button id="get-my-info-btn">Get My Info</button>
+            <button id="get-all-users-btn" class="secondary">Get All Users</button>
+            <button id="logout-btn" class="danger">Logout</button>
+        </div>
+
+        <div id="users-display"></div>
+    </div>
+</body>
+</html>

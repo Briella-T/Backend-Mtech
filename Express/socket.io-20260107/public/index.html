@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Helllo Socket.IO</title>
+  </head>
+
+  <body>
+    <h1>Socket.IO Chat</h1>
+    <div id="nickNameDiv">
+      <label for="userNameInput">User Name</label>
+      <input type="text" name="userName" id="userNameInput" />
+      <button id="submitNickName">Submit</button>
+    </div>
+    <form id="messageForm" action="" style="display: none">
+      <label for="chatMessageInput">Message</label>
+      <input id="chatMessageInput" autocomplete="off" />
+      <button>Send</button>
+    </form>
+    <ul id="messageList"></ul>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      const socket = io();
+      let messageList = document.getElementById("messageList");
+      let messageForm = document.getElementById("messageForm");
+      let chatMessageInput = document.getElementById("chatMessageInput");
+
+      let userNameInput = document.getElementById("userNameInput");
+      let userName = "";
+
+      messageForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        if (chatMessageInput.value) {
+          socket.emit("chat message from client", chatMessageInput.value);
+          chatMessageInput.value = " ";
+          messageList.appendChild(document.createElement("li")).textContent =
+            `Me: ${chatMessageInput.value}`;
+          window.scrollTo(0, document.body.scrollHeight);
+        }
+      });
+      socket.on("chat message from server", (data) => {
+        let item = document.createElement("li");
+        item.textContent = `${data.userName}: ${data.msg}`;
+        messageList.appendChild(item);
+        window.scrollTo(0, document.body.scrollHeight);
+      });
+
+      const nickNameDiv = document.getElementById("nickNameDiv");
+      const submitNickName = document.getElementById("submitNickName");
+      submitNickName.addEventListener("click", (e) => {
+        e.preventDefault();
+        console.log(userName);
+        userName = userNameInput.value;
+        if (userName) {
+          socket.emit("newUser", userName);
+          //hide nickNameDiv
+          nickNameDiv.style.display = "none";
+          submitNickName.disabled = true;
+          //show messageForm
+          messageForm.style.display = "block";
+        }
+      });
+      socket.on("newUser", (name) => {
+        let item = document.createElement("li");
+        item.textContent = `New user: ${name} joined the chat`;
+        messageList.appendChild(item);
+        window.scrollTo(0, document.body.scrollHeight);
+      });
+    </script>
+  </body>
+</html>
