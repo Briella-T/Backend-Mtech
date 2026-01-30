@@ -1,0 +1,13 @@
+{
+  "name": "simple-card-api",
+  "version": "1.0.0",
+  "description": "Simple Express.js API for collectible cards",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2"
+  }
+}

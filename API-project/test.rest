@@ -1,0 +1,52 @@
+# Simple Card Game API Tests
+
+### Get Authentication Token
+POST http://localhost:3000/getToken
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "password"
+}
+
+###
+
+### Get All Cards
+GET http://localhost:3000/cards
+
+###
+
+### Get Cards with Filter
+GET http://localhost:3000/cards?type=Creature&rarity=Rare
+
+###
+
+### Create New Card (replace YOUR_TOKEN with actual token)
+POST http://localhost:3000/cards/create
+Authorization: Bearer YOUR_TOKEN
+Content-Type: application/json
+
+{
+  "name": "Fire Ball",
+  "type": "Spell",
+  "rarity": "Uncommon"
+}
+
+###
+
+### Update Card (replace YOUR_TOKEN)
+PUT http://localhost:3000/cards/1
+Authorization: Bearer YOUR_TOKEN
+Content-Type: application/json
+
+{
+  "name": "Super Lightning Bolt"
+}
+
+###
+
+### Delete Card (replace YOUR_TOKEN)
+DELETE http://localhost:3000/cards/1
+Authorization: Bearer YOUR_TOKEN
+
+###
